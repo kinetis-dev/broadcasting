@@ -7,12 +7,12 @@ namespace Kinetis\Broadcasting\Tests\Fixtures;
 use Kinetis\Broadcasting\Attributes\BroadcastChannel;
 
 /**
- * `x.{id}a` — strictly broader than CycleNarrowChannelAuthorizer's
- * `x.{id}za`; see that class's own docblock.
+ * A placeholder sharing its segment with literal text — outside the
+ * grammar, where a placeholder always spans a whole segment.
  */
-final class CycleBroadChannelAuthorizer
+final class EmbeddedPlaceholderChannelAuthorizer
 {
-    #[BroadcastChannel('x.{id}a')]
+    #[BroadcastChannel('orders.order-{id}')]
     public function authorize(string $id): bool
     {
         return true;
